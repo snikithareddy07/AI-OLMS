@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0 <modelVersion>
+   <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.aiolms</groupId>
     <artifactId>ai-olms</artifactId>
@@ -13,8 +13,8 @@
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         
@@ -25,14 +25,22 @@
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0<version>
+            <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
 
-    <dependencies>
+    </dependencies>
 
     <build>
-        <finalName>ai-olms</finalName>
-   
+    <finalName>ai-olms</finalName>
+
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+        </plugin>
+    </plugins>
+   </build>
 
 </project>
